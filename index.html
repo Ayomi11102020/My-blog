@@ -4,33 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayomi’s World - Blog</title>
+    <title>Ayomi's World</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Ayomi’s World</h1>
+        <h1>Ayomi's World</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
             <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
-        <h2>Blog Posts</h2>
-        <article>
-            <h3>The Beginning of Humanity</h3>
-            <p>Humanity’s journey began millions of years ago when early humans evolved from primates. Over time, through survival, adaptation, and discovery, humans developed tools, formed communities, and began shaping the world we know today. The story of humanity is one of curiosity, resilience, and growth.</p>
-        </article>
-        <article>
-            <h3>The Rise of Ancient Civilizations</h3>
-            <p>Ancient civilizations like Egypt, Mesopotamia, and the Indus Valley played a crucial role in shaping human history. They developed writing systems, built remarkable structures, and advanced in science, art, and governance. These civilizations laid the foundation for modern societies and continue to influence us today.</p>
-        </article>
+        <h2>Welcome to Get Knowledge</h2>
+        <p>Hi, I’m Ayomi. I would like to tell people more about the history of humanity.</p>
+        <input type="text" id="searchInput" onkeyup="searchPosts()" placeholder="Search posts...">
+
+        <div id="categories">
+            <button onclick="filterPosts('all')">All</button>
+            <button onclick="filterPosts('history')">History</button>
+            <button onclick="filterPosts('culture')">Culture</button>
+            <button onclick="filterPosts('religion')">Religion</button>
+        </div>
+
+        <div id="posts">
+            <div class="post" data-category="history">
+                <h3><a href="blog.html">The Beginning of Humanity</a></h3>
+                <button class="like-btn" onclick="likePost(this)">Like 👍 <span>0</span></button>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Ayomi’s World</p>
+        <p>&copy; 2025 Ayomi's World</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
